@@ -34,6 +34,9 @@ def create_urls(location, searches, radius=50, province='ON', range=14):
         url = url + '&radius=' + str(radius) + '&sort=date'
         url = url + '&fromage=' + str(range) + '&filter=0'
         urls_list.append(url)
+        for i in [0, 10, 20, 30]:
+            url = url + '&start=' + str(i)
+            urls_list.append(url)
     return urls_list
 
 
